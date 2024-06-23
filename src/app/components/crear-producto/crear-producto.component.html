@@ -11,29 +11,29 @@
                             <div class="text-danger" 
                             *ngIf="productoForm.get('producto')?.hasError('required') && productoForm.get('producto')?.touched">
             
-                            <span>El nombre del producto <strong>es obligaorio</strong></span>
+                            <span>El nombre del producto <strong>es obligatorio</strong></span>
                             </div>
                         </div>
 
                         <div class="mb-3">
-                            <input type="text" formControlName="categoria" class="form-control form-control-lg" placeholder="Categoria">
+                            <input type="text" formControlName="categoria" class="form-control form-control-lg" placeholder="Categoría">
                             <div class="text-danger" *ngIf="productoForm.get('categoria')?.hasError('required') && productoForm.get('categoria')?.touched">
-                            <span>La categoria <strong>es obligaoria</strong></span>
+                            <span>La categoría <strong>es obligatoria</strong></span>
                             </div>
                         </div>
 
                         <div class="mb-3">
-                            <input type="text" formControlName="ubicacion" class="form-control form-control-lg" placeholder="Ubicacion">
+                            <input type="text" formControlName="ubicacion" class="form-control form-control-lg" placeholder="Ubicación">
                             <div class="text-danger" *ngIf="productoForm.get('ubicacion')?.hasError('required') && productoForm.get('ubicacion')?.touched">
                             
-                            <span>La ubicacion <strong>es obligaoria</strong></span>
+                            <span>La ubicación <strong>es obligatoria</strong></span>
                             </div>
                         </div>
 
                         <div class="mb-3">
                             <input type="text" formControlName="precio" class="form-control form-control-lg" placeholder="Precio">
                             <div class="text-danger" *ngIf="productoForm.get('precio')?.hasError('required') && productoForm.get('precio')?.touched">
-                            <span>El precio <strong>es obligaorio</strong></span>
+                            <span>El precio <strong>es obligatorio</strong></span>
                             </div>
                         </div>
 
@@ -47,3 +47,4 @@
         </div>
     </div>
  </div>
+

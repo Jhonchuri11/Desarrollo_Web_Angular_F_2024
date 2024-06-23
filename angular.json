@@ -73,12 +73,19 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "ssl": false,
+            "host": "localhost",
+            "port": 4200
+          },
           "configurations": {
             "production": {
-              "buildTarget": "cliente:build:production"
+              "buildTarget": "cliente:build:production",
+              "ssl": false
             },
             "development": {
-              "buildTarget": "cliente:build:development"
+              "buildTarget": "cliente:build:development",
+              "ssl": false
             }
           },
           "defaultConfiguration": "development"

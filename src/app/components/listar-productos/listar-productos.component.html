@@ -20,19 +20,19 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Teclado</td>
-                                <td>Accesorios</td>
-                                <td>Caja</td>
-                                <td>40</td>
+                            <tr *ngFor="let producto of listProductos">
+                                <td>{{ producto.nombre }}</td>
+                                <td>{{ producto.categoria }}</td>
+                                <td>{{ producto.ubicacion }}</td>
+                                <td>{{ producto.precio  }}</td>
                                 <td>
-                                    <i routerLink="['/editar-producto']" class="fas fa-edit text-primary"></i>
-                                    <i class="fas fa-trash text-danger"></i>
+                                    <i [routerLink]="['editar-producto', producto._id ]"  class="fas fa-edit text-primary"></i>
+                                    <i (click)="eliminarProducto(producto._id)" class="fas fa-trash text-danger"></i>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <h5 style="text-align: start; margin-top: 10px;">No hay productos para mostrar</h5>
+                   
                 </div>
             </div>
         </div>
